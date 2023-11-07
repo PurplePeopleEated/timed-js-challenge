@@ -49,3 +49,12 @@ function startTimer() {
       }
   }, 1000);
 }
+
+function loadQuestion() {
+  // Pick random question/answer pair
+  var currentQuestion = Math.floor(Math.random() * allQuestions.length);
+  question = allQuestions[currentQuestion].question;
+  answer = allQuestions[currentQuestion].answer;
+
+
+}
