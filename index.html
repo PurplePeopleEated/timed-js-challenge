@@ -10,31 +10,31 @@
 </head>    
 
 <body>
-    <main class = 'container'>
-        <div class = 'row'>
-            <div class = 'col-8'>
-                <div class = 'game-header'><h2 class = 'questionCard'>Test Title questionnnn?</h2></div>
+    <main class = 'container-md my-5 border rounded-3 shadow-lg'>
+        <div class = 'row justify-content-center'>
+            <div class = 'col-8 text-center m-5 column-gap-2'>
+                <div class = 'game-header p-3'><h2 class = 'questionCard'>Test Title questionnnn?</h2></div>
 
                     <!-- <button class = 'btns' id = 'btn-start'>Start Challenge</button> -->
 
-                <div class = 'btns answerbtns' id = 'answers'>
-                    <button id = 'btnA'>A. </button>
-                    <button id = 'btnB'>B. </button>
-                    <button id = 'btnC'>C. </button>
-                    <button id = 'btnD'>D. </button>
+                <div class = 'btns answerbtns p-3' id = 'answers'>
+                    <button class = 'btn btn-secondary' id = 'btnA'>A. </button>
+                    <button class = 'btn btn-secondary' id = 'btnB'>B. </button>
+                    <button class = 'btn btn-secondary' id = 'btnC'>C. </button>
+                    <button class = 'btn btn-secondary' id = 'btnD'>D. </button>
                 </div>
             </div>
         
 
-        <div class = 'col-4'>
+        <div class = 'col-4 m-5'>
             <div class = 'row'>
             <div class = 'game-timer col'>
-                <h3>Time Left: <span id = 'timer'>0</span></h3>
+                <h3>Timer: <span id = 'timer'>0</span></h3>
             </div>
 
             <div class = 'game-score col'>
                 <h3>Score: <span id = 'score'>0</span></h3>
-                <a href = 'leaderboard.html'>Leaderboard</a>
+                <a class = 'link-info link-underline-opacity-0' href = 'leaderboard.html'>Leaderboard</a>
             </div>
         </div>
         </div>
