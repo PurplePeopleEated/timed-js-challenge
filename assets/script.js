@@ -8,6 +8,9 @@ var backButton = document.getElementById('btn-back');
 
 // Added variables
 var questionCounter;
+var question = '';
+var answer = '';
+var buttons = [buttonA, buttonB, buttonC, buttonD];
 
 // Arrays for questions, answers, and fake answers
 const allQuestions = [
