@@ -56,5 +56,17 @@ function loadQuestion() {
   question = allQuestions[currentQuestion].question;
   answer = allQuestions[currentQuestion].answer;
 
+  // Pick random button for answer and display
+  var correctButton = Math.floor(Math.random() * 4);
 
+  // Display answers on buttons
+  for (var i=0; i<4; i++) {
+    if (i === correctButton) {
+      buttons[correctButton].innerHTML = answer;
+    }
+    else {
+      var randomFakeAns = Math.floor(Math.random() * fakeAnswers.length);
+      buttons[i].innerHTML = fakeAnswers[randomFakeAns];
+    }
+  }
 }
