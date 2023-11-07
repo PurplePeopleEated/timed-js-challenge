@@ -37,3 +37,15 @@ function startGame() {
 
   questionCounter = 0;
 }
+
+function startTimer() {
+  timerCount = 60;
+  timer = setInterval(function() {
+      timerCount--;
+      timerElement.innerHTML = timerCount;
+      if (timerCount === 0){
+          clearTimeout(timer);
+          endQuiz()
+      }
+  }, 1000);
+}
