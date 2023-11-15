@@ -4,7 +4,7 @@ var buttonB = document.getElementById('btnB');
 var buttonC = document.getElementById('btnC');
 var buttonD = document.getElementById('btnD');
 var startButton = document.getElementById('btn-start');
-// var backButton = document.getElementById('btn-back');
+// var backButton = document.getElementById('#btn-back');
 
 // Added variables
 var questionCounter;
@@ -19,6 +19,8 @@ var correctButton;
 var questionCardEl = document.querySelector('.questionCard');
 var timerEl = document.getElementById('timer');
 var currentQuestion;
+// var gameEl = document.querySelector('.game-header');
+// var scoreList = [];
 
 // Arrays for questions, answers, and fake answers
 let allQuestions = [
@@ -42,9 +44,13 @@ const fakeAnswers = ['whoo', 'yippie', 'gawrsh', 'cinnamon', 'crazy', 'haus', 'w
 function startGame() {
   startButton.disabled = true;
 
+  for (var i=0; i<4; i++) {
+    buttons[i].disabled = false;
+  }
+
   questionCounter = 0;
   scoreCounter = 0;
-  
+
   loadQuestion();
   startTimer();
 }
@@ -90,6 +96,9 @@ function loadQuestion() {
       buttons[i].innerHTML = fakeAnswers[randomFakeAns];
     }
   }
+
+  // Display question
+  questionCardEl.innerHTML = question;
 }
 
 answersEl.addEventListener('click', function(event) {
@@ -113,5 +122,15 @@ console.log(allQuestions);
     endGame();
   }
 });
+
+// function saveLeaderboard() {
+//   // Prompt user to enter initials
+//   var initials = prompt('Enter Initials');
+//   // newSave = {player: savePrompt.textContent, score: scoreCounter};
+// console.log(initials.innerText);
+//   if (initials != null) {
+//     localStorage.setItem('save', JSON.stringify(newSave));
+//   }
+// }
 
 startButton.addEventListener('click', startGame);
