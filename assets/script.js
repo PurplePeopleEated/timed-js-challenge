@@ -53,6 +53,9 @@ function endGame() {
   startButton.disabled = false;
   clearTimeout(timer);
 
+  for (var i=0; i<4; i++) {
+    buttons[i].disabled = true;
+  }
   // saveLeaderboard();
 }
 
