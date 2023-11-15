@@ -113,3 +113,5 @@ console.log(allQuestions);
     endGame();
   }
 });
+
+startButton.addEventListener('click', startGame);
