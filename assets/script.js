@@ -11,6 +11,11 @@ var questionCounter;
 var question = '';
 var answer = '';
 var buttons = [buttonA, buttonB, buttonC, buttonD];
+var answersEl = document.querySelector('.answerbtns');
+var scoreEl = document.getElementById('score');
+var correctButton;
+var questionCardEl = document.querySelector('.questionCard');
+var timerEl = document.getElementById('timer');
 
 // Arrays for questions, answers, and fake answers
 const allQuestions = [
@@ -71,7 +76,7 @@ function loadQuestion() {
   answer = allQuestions[currentQuestion].answer;
 
   // Pick random button for answer and display
-  var correctButton = Math.floor(Math.random() * 4);
+  correctButton = Math.floor(Math.random() * 4);
 
   // Display answers on buttons
   for (var i=0; i<4; i++) {
