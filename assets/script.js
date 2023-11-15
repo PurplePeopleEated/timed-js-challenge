@@ -73,7 +73,7 @@ function startTimer() {
 
 function loadQuestion() {
   // Pick random question/answer pair
-  var currentQuestion = Math.floor(Math.random() * allQuestions.length);
+  currentQuestion = Math.floor(Math.random() * allQuestions.length);
   question = allQuestions[currentQuestion].question;
   answer = allQuestions[currentQuestion].answer;
 
