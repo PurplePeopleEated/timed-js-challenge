@@ -8,6 +8,8 @@ var startButton = document.getElementById('btn-start');
 
 // Added variables
 var questionCounter;
+var scoreCounter;
+var timer;
 var question = '';
 var answer = '';
 var buttons = [buttonA, buttonB, buttonC, buttonD];
@@ -16,6 +18,7 @@ var scoreEl = document.getElementById('score');
 var correctButton;
 var questionCardEl = document.querySelector('.questionCard');
 var timerEl = document.getElementById('timer');
+var currentQuestion;
 
 // Arrays for questions, answers, and fake answers
 const allQuestions = [
