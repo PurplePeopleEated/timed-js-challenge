@@ -29,10 +29,8 @@ const allQuestions = [
 const fakeAnswers = ['whoo', 'yippie', 'gawrsh', 'cinnamon', 'crazy', 'haus', 'woah'];
 
 // Runs on page load
-function init() {
-  questionCard.innerHTML = 'Timed JavaScript Challenge';
-  answersEl.style.display = 'none';
-}
+  questionCardEl.innerHTML = 'Timed JavaScript Challenge';
+  startButton.addEventListener('click', startGame);
 
 function startGame() {
   startButton.disabled = true;
