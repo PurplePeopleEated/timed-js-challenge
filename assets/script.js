@@ -100,7 +100,7 @@ answersEl.addEventListener('click', function(event) {
 
 console.log(allQuestions);
   if(chosenAnswer === answer) {
-    scoreCounter += 10;
+    scoreCounter += 25;
     scoreEl.innerHTML = scoreCounter;
   } else if (chosenAnswer !== answer) {
     timerCount -= 10;
