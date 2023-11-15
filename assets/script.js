@@ -91,3 +91,25 @@ function loadQuestion() {
     }
   }
 }
+
+answersEl.addEventListener('click', function(event) {
+  var chosenAnswer = event.target.textContent;
+  if (allQuestions.length > 1) {
+  allQuestions = allQuestions.filter((_, index) => index !== currentQuestion);
+  }
+
+console.log(allQuestions);
+  if(chosenAnswer === answer) {
+    scoreCounter += 10;
+    scoreEl.innerHTML = scoreCounter;
+  } else if (chosenAnswer !== answer) {
+    timerCount -= 10;
+  }
+
+  if (questionCounter < 3) {
+    questionCounter += 1;
+    loadQuestion();
+  } else {
+    endGame();
+  }
+});
