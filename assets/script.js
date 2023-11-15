@@ -34,9 +34,22 @@ const fakeAnswers = ['whoo', 'yippie', 'gawrsh', 'cinnamon', 'crazy', 'haus', 'w
 
 function startGame() {
   startButton.disabled = true;
-  startButton.style.display = 'none';
+  startButton.classList.add('d-none');
+  answersEl.classList.remove('d-none');
 
   questionCounter = 0;
+  scoreCounter = 0;
+  
+  loadQuestion();
+  startTimer();
+}
+
+function endGame() {
+  answersEl.classList.add('.d-none').remove('.d-flex');
+  startButton.disabled = false;
+  startButton.classList.remove('.d-none').add('.d-flex');
+
+  // saveLeaderboard();
 }
 
 function startTimer() {
