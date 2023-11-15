@@ -38,12 +38,9 @@ const fakeAnswers = ['whoo', 'yippie', 'gawrsh', 'cinnamon', 'crazy', 'haus', 'w
 
 // Runs on page load
   questionCardEl.innerHTML = 'Timed JavaScript Challenge';
-  startButton.addEventListener('click', startGame);
 
 function startGame() {
   startButton.disabled = true;
-  startButton.classList.add('d-none');
-  answersEl.classList.remove('d-none');
 
   questionCounter = 0;
   scoreCounter = 0;
@@ -53,9 +50,8 @@ function startGame() {
 }
 
 function endGame() {
-  answersEl.classList.add('.d-none').remove('.d-flex');
   startButton.disabled = false;
-  startButton.classList.remove('.d-none').add('.d-flex');
+  clearTimeout(timer);
 
   // saveLeaderboard();
 }
@@ -64,10 +60,10 @@ function startTimer() {
   timerCount = 60;
   timer = setInterval(function() {
       timerCount--;
-      timerElement.innerHTML = timerCount;
+      timerEl.innerHTML = timerCount;
       if (timerCount === 0){
           clearTimeout(timer);
-          endQuiz()
+          endGame();
       }
   }, 1000);
 }
