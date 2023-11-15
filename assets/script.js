@@ -21,7 +21,7 @@ var timerEl = document.getElementById('timer');
 var currentQuestion;
 
 // Arrays for questions, answers, and fake answers
-const allQuestions = [
+let allQuestions = [
   {'question': 'This is question number 1?', 
   'answer': 'Correct1'}, 
 
